@@ -1,10 +1,13 @@
 import hosts
+import conf
 
 class application:
-
     def create_cobalt_strike_host (ip:str, fqdn:str):
         return hosts.cobalt_strike(ip, fqdn)
     
+    def get_host_property (prop):
+        return config.cobalt_strike.get_property(prop)
+
 if __name__ == "__main__":
     my = application()
 
