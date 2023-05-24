@@ -6,8 +6,11 @@ class application:
         return hosts.cobalt_strike(ip, fqdn)
     
     def get_host_property (prop):
-        return config.cobalt_strike.get_property(prop)
+        return conf.config.cobalt_strike.get_property(prop)
 
+    def get_set(self):
+        host_set = conf.config.build_ts_set(self)
+        return host_set
 if __name__ == "__main__":
     my = application()
 

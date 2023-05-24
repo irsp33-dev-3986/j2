@@ -7,5 +7,9 @@ if __name__ == "__main__":
 
     print(f"{host02.get_risk}")
 
+    print(application.get_set(host02))
+    
+    """
     host02_risk = application.get_host_property(risk)
     print(host02_risk)
+    """

@@ -38,8 +38,7 @@ class cobalt_strike(hosts):
         self.spawnto = spawnto #str("%windir%\sysnative\dllhost.exe -o enable")
         self.sleeptime = sleeptime #int(62248)
         self.watermark = watermark #int(987654321)
-        conf.cobalt_strike(ip, fqdn, ttype, identity, spawnto, sleeptime, watermark)
-        hosts.i += 1
+        #conf.cobalt_strike(ip, fqdn, ttype, identity, spawnto, sleeptime, watermark)
 
     @property
     def type(self):

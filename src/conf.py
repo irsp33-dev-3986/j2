@@ -16,15 +16,20 @@ class cobalt_strike(config):
         self.spawnto = spawnto
         self.sleeptime = sleeptime
         self.watermark = watermark
+        config.build_ts_set()
 
-        team_server = {"ip" : ip, "fqdn" : fqdn, "type" : ttype, "identity" : identity, "spawnto" : spawnto, "sleep_time" : sleeptime, "watermark" : watermark}
-        team_server_set = team_server_set.add(team_server)
-
+    @property
     def get_property(self, prop):
         return self.prop
 
+    def build_ts_set(self):
+        team_server = config.build_dict()
+        team_server_set = team_server_set.add(team_server)
+        return team_server_set
+
     def build_dict(self):
-        return team_
+        team_server = {"ip" : self.ip, "fqdn" : self.fqdn, "type" : self.ttype, "identity" : self.identity, "spawnto" : self.spawnto, "sleep_time" : self.sleeptime, "watermark" : self.watermark}
+        return team_server
 
     """
     @property.setter
